@@ -699,7 +699,7 @@ var PDFViewerApplication = {
                 renderer: _app_options.AppOptions.get('renderer'),
                 enableWebGL: _app_options.AppOptions.get('enableWebGL'),
                 l10n: this.l10n,
-                textLayerMode: _app_options.AppOptions.get('textLayerMode'),
+                textLayerMode: false,
                 imageResourcesPath: _app_options.AppOptions.get('imageResourcesPath'),
                 renderInteractiveForms: _app_options.AppOptions.get('renderInteractiveForms'),
                 enablePrintAutoRotate: _app_options.AppOptions.get('enablePrintAutoRotate'),
@@ -2399,6 +2399,7 @@ function webViewerClick(evt) {
 }
 
 function webViewerKeyDown(evt) {
+  return;
   if (PDFViewerApplication.overlayManager.active) {
     return;
   }
@@ -10643,7 +10644,7 @@ function () {
     this.downloadManager = options.downloadManager || null;
     this.findController = options.findController || null;
     this.removePageBorders = options.removePageBorders || false;
-    this.textLayerMode = Number.isInteger(options.textLayerMode) ? options.textLayerMode : _ui_utils.TextLayerMode.ENABLE;
+    this.textLayerMode = Number.isInteger(options.textLayerMode) ? options.textLayerMode : _ui_utils.TextLayerMode.DISABLE;
     this.imageResourcesPath = options.imageResourcesPath || '';
     this.renderInteractiveForms = options.renderInteractiveForms || false;
     this.enablePrintAutoRotate = options.enablePrintAutoRotate || false;
@@ -11874,7 +11875,7 @@ function () {
     this.viewport = defaultViewport;
     this.pdfPageRotate = defaultViewport.rotation;
     this.hasRestrictedScaling = false;
-    this.textLayerMode = Number.isInteger(options.textLayerMode) ? options.textLayerMode : _ui_utils.TextLayerMode.ENABLE;
+    this.textLayerMode = Number.isInteger(options.textLayerMode) ? options.textLayerMode : _ui_utils.TextLayerMode.DISABLE;
     this.imageResourcesPath = options.imageResourcesPath || '';
     this.renderInteractiveForms = options.renderInteractiveForms || false;
     this.useOnlyCssZoom = options.useOnlyCssZoom || false;
@@ -14137,7 +14138,7 @@ function getDefaultPreferences() {
       "sidebarViewOnLoad": -1,
       "scrollModeOnLoad": -1,
       "spreadModeOnLoad": -1,
-      "textLayerMode": 1,
+      "textLayerMode": 0,
       "useOnlyCssZoom": false,
       "viewOnLoad": 0,
       "disableAutoFetch": false,

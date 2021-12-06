@@ -2403,3 +2403,15 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     display: none;
   }
 }
+
+#secondaryToolbarToggle {
+  display: none !important;
+}
+
+#toolbarViewer {
+  visibility: hidden;
+}
+
+#toolbarViewerRight {
+  display: none !important;
+}
