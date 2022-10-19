@@ -14824,7 +14824,7 @@ class BasePreferences {
     "sidebarViewOnLoad": -1,
     "scrollModeOnLoad": -1,
     "spreadModeOnLoad": -1,
-    "textLayerMode": 1,
+    "textLayerMode": 0,
     "useOnlyCssZoom": false,
     "viewerCssTheme": 0,
     "viewOnLoad": 0,
