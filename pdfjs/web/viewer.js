@@ -14761,6 +14761,7 @@ class GenericPreferences extends _preferences.BasePreferences {
   }
 
   async _readFromStorage(prefObj) {
+    return {};
     return JSON.parse(localStorage.getItem("pdfjs.preferences"));
   }
 
