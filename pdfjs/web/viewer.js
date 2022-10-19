@@ -3408,6 +3408,7 @@ let validateFileURL;
   const HOSTED_VIEWER_ORIGINS = ["null", "http://mozilla.github.io", "https://mozilla.github.io"];
 
   validateFileURL = function (file) {
+    return;
     if (!file) {
       return;
     }
