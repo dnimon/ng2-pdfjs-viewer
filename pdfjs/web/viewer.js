@@ -1712,6 +1712,7 @@ const PDFViewerApplication = {
   },
 
   async _parseHashParameters() {
+    window.applyUserDefaults(_app_options.AppOptions); //c1
     if (!_app_options.AppOptions.get("pdfBugEnabled")) {
       return;
     }
@@ -16755,5 +16756,3 @@ window.applyParameterOverride = function(config) {
     config.toolbar.viewFind.classList.add('hidden');
   }
 }//c1e
-
-window.applyUserDefaults(_app_options.AppOptions); //c1
