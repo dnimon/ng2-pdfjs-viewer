@@ -4508,11 +4508,11 @@ class PDFCursorTools {
   constructor({
     container,
     eventBus,
-    cursorToolOnLoad = CursorTool.SELECT
+    cursorToolOnLoad = CursorTool.HAND
   }) {
     this.container = container;
     this.eventBus = eventBus;
-    this.active = CursorTool.SELECT;
+    this.active = CursorTool.HAND;
     this.activeBeforePresentationMode = null;
     this.handTool = new _grab_to_pan.GrabToPan({
       element: this.container
